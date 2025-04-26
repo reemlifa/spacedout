@@ -1,67 +1,211 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf=8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <title>Solar System Simulation</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="script.js"></script>
+    `
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div id="distance-display">Distance: --</div>
+
     <a-scene>
-      <!--Sun-->
-      <a-sphere color="yellow" radius="1"></a-sphere>
-      <!--Mercury-->
-      <a-sphere color="red" radius="0.25" position="0 0 -2.01"></a-sphere>
-      <!--Venus-->
-      <a-sphere color="white" radius="0.6" position="0 0 -3.02"></a-sphere>
-      <!--Earth-->
-      <a-sphere color="green" radius="0.67" position="0 0 -4.62"></a-sphere>
-      <!--Mars-->
-      <a-sphere color="orange" radius="0.39" position="0 0 -5.82"></a-sphere>
-      <!--Camera-->
-      <a-entity id="rig" position="0 2.7 5">
-        <a-entity camera look-controls wasd-controls="speed: 1000"> </a-entity>
+      <a-entity
+        id="rig"
+        position="8 3 0"
+        rotation="0 60 0"
+        look-at="#sun"
+        track-distance
+      >
+        <a-entity camera look-controls wasd-controls> </a-entity>
       </a-entity>
-      <!--Sky-->
+
+      <!-- Sun -->
+      <a-sphere id="sun" color="yellow" radius="1.5"></a-sphere>
+
+      <!-- Mercury -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 2933; easing: linear"
+      >
+        <a-sphere
+          id="mercury"
+          color="red"
+          radius="0.038"
+          position="2.1 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="2.08"
+          radius-outer="2.12"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
+      <!-- Venus -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 7380; easing: linear"
+      >
+        <a-sphere
+          id="venus"
+          color="white"
+          radius="0.095"
+          position="3.5 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="3.48"
+          radius-outer="3.52"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
+      <!-- Earth -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear"
+      >
+        <a-sphere
+          id="earth"
+          color="green"
+          radius="0.12"
+          position="5.0 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="4.98"
+          radius-outer="5.02"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
+      <!-- Mars -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 22560; easing: linear"
+      >
+        <a-sphere
+          id="mars"
+          color="orange"
+          radius="0.065"
+          position="7.0 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="6.98"
+          radius-outer="7.02"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
+      <!-- Jupiter -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 142560; easing: linear"
+      >
+        <a-sphere
+          id="jupiter"
+          color="brown"
+          radius="1.4"
+          position="14.5 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="14.48"
+          radius-outer="14.52"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
+      <!-- Saturn -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 350400; easing: linear"
+      >
+        <a-sphere
+          id="saturn"
+          color="goldenrod"
+          radius="1.2"
+          position="23.5 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="23.48"
+          radius-outer="23.52"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
+      <!-- Uranus -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 1007520; easing: linear"
+      >
+        <a-sphere
+          id="uranus"
+          color="lightblue"
+          radius="0.9"
+          position="30.0 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="29.98"
+          radius-outer="30.02"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
+      <!-- Neptune -->
+      <a-entity
+        rotation="0 0 0"
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 1965360; easing: linear"
+      >
+        <a-sphere
+          id="neptune"
+          color="lightblue"
+          radius="0.9"
+          position="38.0 0 0"
+        ></a-sphere>
+        <a-ring
+          color="white"
+          position="0 0 0"
+          radius-inner="37.98"
+          radius-outer="38.02"
+          material="side: double; smooth: true"
+          rotation="90 0 0"
+          segments-theta="64"
+        ></a-ring>
+      </a-entity>
+
       <a-assets>
         <img id="sky" src="sky.jpg" />
       </a-assets>
       <a-sky src="#sky"></a-sky>
-      <!--Rings-->
-      <a-ring
-        color="white"
-        position="0 0 0"
-        radius-inner="2"
-        radius-outer="2.02"
-        material="side: double"
-        rotation="90 0 0"
-      ></a-ring>
-      <a-ring
-        color="white"
-        position="0 0 0"
-        radius-inner="3"
-        radius-outer="3.02"
-        material="side: double"
-        rotation="90 0 0"
-      ></a-ring>
-      <a-ring
-        color="white"
-        position="0 0 0"
-        radius-inner="4.6"
-        radius-outer="4.62"
-        material="side: double"
-        rotation="90 0 0"
-      ></a-ring>
-      <a-ring
-        color="white"
-        position="0 0 0"
-        radius-inner="5.80"
-        radius-outer="5.82"
-        material="side: double"
-        rotation="90 0 0"
-      ></a-ring>
     </a-scene>
-    <script src="script.js"></script>
   </body>
 </html>
