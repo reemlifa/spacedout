@@ -24,7 +24,7 @@
       </a-entity>
 
       <!-- Sun -->
-      <a-sphere id="sun" color="yellow" radius="1.5"></a-sphere>
+      <a-sphere id="sun" src="assets/sun.jpg" radius="1.5"></a-sphere>
 
       <!-- Mercury -->
       <a-entity
@@ -33,7 +33,7 @@
       >
         <a-sphere
           id="mercury"
-          color="red"
+          texture="mercury"
           radius="0.038"
           position="2.1 0 0"
         ></a-sphere>
@@ -41,10 +41,10 @@
           color="white"
           position="0 0 0"
           radius-inner="2.08"
-          radius-outer="2.12"
+          radius-outer="2.09"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
@@ -55,7 +55,7 @@
       >
         <a-sphere
           id="venus"
-          color="white"
+          src="assets/venus.jpg"
           radius="0.095"
           position="3.5 0 0"
         ></a-sphere>
@@ -63,10 +63,10 @@
           color="white"
           position="0 0 0"
           radius-inner="3.48"
-          radius-outer="3.52"
+          radius-outer="3.49"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
@@ -77,7 +77,7 @@
       >
         <a-sphere
           id="earth"
-          color="green"
+          src="assets/earth.jpeg"
           radius="0.12"
           position="5.0 0 0"
         ></a-sphere>
@@ -85,10 +85,10 @@
           color="white"
           position="0 0 0"
           radius-inner="4.98"
-          radius-outer="5.02"
+          radius-outer="4.99"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
@@ -99,7 +99,7 @@
       >
         <a-sphere
           id="mars"
-          color="orange"
+          src="assets/mars.jpg"
           radius="0.065"
           position="7.0 0 0"
         ></a-sphere>
@@ -107,10 +107,10 @@
           color="white"
           position="0 0 0"
           radius-inner="6.98"
-          radius-outer="7.02"
+          radius-outer="6.99"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
@@ -121,7 +121,7 @@
       >
         <a-sphere
           id="jupiter"
-          color="brown"
+          src="assets/jupiter.jpg"
           radius="1.4"
           position="14.5 0 0"
         ></a-sphere>
@@ -129,10 +129,10 @@
           color="white"
           position="0 0 0"
           radius-inner="14.48"
-          radius-outer="14.52"
+          radius-outer="14.50"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
@@ -143,18 +143,28 @@
       >
         <a-sphere
           id="saturn"
-          color="goldenrod"
+          src="assets/saturn.jpg"
           radius="1.2"
           position="23.5 0 0"
         ></a-sphere>
         <a-ring
+          radius-inner="2"
+          radius-outer="2.4"
+          material="side: double; smooth: true"
+          position="23.49 0 0"
+          rotation="90 0 0"
+          segments-theta="128"
+          src="assets/saturnring.jpg"
+          ></a-ring>
+        </a-ring>
+        <a-ring
           color="white"
           position="0 0 0"
           radius-inner="23.48"
-          radius-outer="23.52"
+          radius-outer="23.51"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
@@ -165,7 +175,7 @@
       >
         <a-sphere
           id="uranus"
-          color="lightblue"
+          src="assets/uranus.jpg"
           radius="0.9"
           position="30.0 0 0"
         ></a-sphere>
@@ -173,10 +183,10 @@
           color="white"
           position="0 0 0"
           radius-inner="29.98"
-          radius-outer="30.02"
+          radius-outer="30.01"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
@@ -187,7 +197,7 @@
       >
         <a-sphere
           id="neptune"
-          color="lightblue"
+          src="assets/neptune.jpg"
           radius="0.9"
           position="38.0 0 0"
         ></a-sphere>
@@ -198,7 +208,7 @@
           radius-outer="38.02"
           material="side: double; smooth: true"
           rotation="90 0 0"
-          segments-theta="64"
+          segments-theta="128"
         ></a-ring>
       </a-entity>
 
