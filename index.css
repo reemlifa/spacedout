@@ -1,0 +1,23 @@
+a-scene {
+  z-index: -1;
+  position: absolute;
+}
+
+h1,
+.start-button {
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  color: white;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}

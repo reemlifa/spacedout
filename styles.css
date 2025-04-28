@@ -9,3 +9,27 @@
   border-radius: 5px;
   font-family: sans-serif;
 }
+
+#home a-scene {
+  z-index: -1;
+  position: absolute;
+}
+
+#home h1,
+#home .start-button {
+  z-index: 1;
+  position: relative;
+}
+
+h1 {
+  color: white;
+}
+
+#home {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
